@@ -7,7 +7,7 @@
 	AFRAME.registerComponent("country-box", {
     schema: {},
     init: function(){
-        $.getJSON( "https://ip-api.com/json", function(data) {
+        $.getJSON( "https://api.ipdata.co/?api-key=59fccd1a889a28cc2881cb01b6c00e5c4b939e8ade8c1f98f9c8b9ed", function(data) {
         	console.log(data);
         });
     }
