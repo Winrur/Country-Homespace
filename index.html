@@ -2,12 +2,12 @@
 <html><head>
 <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
 <script src="https://sdk.altvr.com/libs/altspace.js/2.9.0/altspace.min.js"></script>
-<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
 	AFRAME.registerComponent("country-box", {
     schema: {},
     init: function(){
-        $.getJSON( "http://ip-api.com/json", function(data) {
+        $.getJSON( "https://ip-api.com/json", function(data) {
         	console.log(data);
         });
     }
