@@ -2,14 +2,20 @@
 <html><head>
 <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
 <script src="https://sdk.altvr.com/libs/altspace.js/2.9.0/altspace.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script
+  		src="https://code.jquery.com/jquery-3.3.1.min.js"
+  		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  		crossorigin="anonymous"></script>
 <script>
 	AFRAME.registerComponent("country-box", {
     schema: {},
+    var el = this.el;
+    var countryData;
     init: function(){
         $.getJSON( "https://api.ipdata.co/?api-key=59fccd1a889a28cc2881cb01b6c00e5c4b939e8ade8c1f98f9c8b9ed", function(data) {
-        	console.log(data);
+			countryData = jQuery.parseJSON(data);
         });
+    el.setAttribute("src", countryData.flag);
     }
 });
 </script>
