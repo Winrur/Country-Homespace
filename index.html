@@ -10,7 +10,6 @@
 	AFRAME.registerComponent("conutry-box", {
     schema: {},
     init: function(){
-        var el = this.el;
         $.getJSON( "http://api.ipstack.com/check?access_key=ee4103133b283c216e3683114d4f7893", function(data) {
         	console.log(data);
         });
@@ -25,7 +24,7 @@
     <a-assets>
         
     </a-assets>
-    <a-box position="0 1 0"></a-box>
+    <a-box position="0 1 0" country-box></a-box>
 </a-scene>
 
 </body></html>
