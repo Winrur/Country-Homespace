@@ -11,11 +11,12 @@
     schema: {},
     init: function(){
     	var el = this.el;
-    	 var countryData;
+    	var countryData;
         $.getJSON( "https://api.ipdata.co/?api-key=59fccd1a889a28cc2881cb01b6c00e5c4b939e8ade8c1f98f9c8b9ed", function(data) {
 			countryData = data;
         });
-    el.setAttribute("src", countryData.flag);
+     console.log(countryData);
+    //el.setAttribute("src", countryData.flag);
     }
 });
 </script>
